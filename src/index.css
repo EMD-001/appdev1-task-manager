@@ -1,68 +1,72 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  background-color: #f8f8f8; /* Light gray background */
+  color: #333;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.task-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+}
+
+h2 {
+  color: #e91e63; /* Pink color for heading */
+  font-size: 32px;
+  margin-bottom: 20px;
+  margin-left: 45px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #e91e63; /* Pink border */
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #d81b60; /* Darker pink on focus */
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #e91e63; /* Pink button */
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
 }
+
+button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+
+}
+
+
