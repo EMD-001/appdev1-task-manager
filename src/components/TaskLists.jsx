@@ -3,8 +3,9 @@ import { MdAdd } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { db } from '../firebase.js';
 import { collection, addDoc, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore';
+import { SignOut } from './SignOut'; // Import SignOut button
 
-const TaskLists = () => {
+const TaskLists = ({ user }) => {  // Accepting user as prop to display username
     const [loading, setLoading] = useState(false);
     const [tasks, setTasks] = useState([]);
     const [title, setTitle] = useState(""); 
@@ -102,10 +103,13 @@ const TaskLists = () => {
     return (
         <div>
             <h2>Task List</h2>
+
+            {/* Display user info and SignOut button */}
+            <h3>Welcome, {user.displayName || user.email} | <SignOut /></h3>
             
             {/* Show error message if any */}
             {error && <p className="error">{error}</p>}
-
+            
             <form onSubmit={handleAddTask}>
                 <input
                     type="text"

@@ -1,9 +1,10 @@
+/* Global styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8; /* Light gray background */
-  color: #333;
+  background-color: #1a1a1a; /* Dark background */
+  color: #fff; /* White text for contrast */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,7 @@ body {
 }
 
 .task-container {
-  background-color: #fff;
+  background-color: #fff; /* White background for the container */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -39,7 +40,7 @@ input, textarea {
   border: 2px solid #e91e63; /* Pink border */
   border-radius: 4px;
   background-color: #f3f3f3;
-  color: #333;
+  color: #333; /* Dark text for better readability */
 }
 
 input:focus, textarea:focus {
@@ -66,7 +67,20 @@ button:hover {
 button:disabled {
   background-color: #f0f0f0;
   cursor: not-allowed;
-
 }
 
+/* Additional styling for general layout */
+a {
+  color: #e91e63; /* Pink links */
+  text-decoration: none;
+}
 
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff4d4d; /* Red color for error messages */
+  font-size: 14px;
+  margin-top: 10px;
+}
